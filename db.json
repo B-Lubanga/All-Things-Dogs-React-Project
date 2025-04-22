@@ -1,0 +1,43 @@
+{
+  "dogs": [
+    {
+      "id": 1,
+      "name": "Max",
+      "breed": "Labrador",
+      "age": "3 years",
+      "location": "Nairobi",
+      "purpose": "adoption",
+      "owner": {
+        "name": "John Doe",
+        "contact": "0712345678",
+        "location": "Nairobi"
+      },
+      "cost": null,
+      "url": "https://placedog.net/400/300?id=1"
+    }
+  ],
+  "rescueCenters": [
+    {
+      "id": 1,
+      "name": "Nairobi Rescue Shelter",
+      "location": "Nairobi",
+      "contact": "0722333444"
+    }
+  ],
+  "vets": [
+    {
+      "id": 1,
+      "name": "Green Pet Vets",
+      "location": "Nairobi",
+      "services": ["Check-up", "Vaccination"]
+    }
+  ],
+  "clinics": [
+    {
+      "id": 1,
+      "name": "PetCare Clinic",
+      "location": "Nairobi",
+      "contact": "0799988776"
+    }
+  ]
+}
