@@ -4,7 +4,7 @@ const FoundDog = () => {
   return (
     <section
       id="found-dog"
-      className="pt-20 container mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg"
+      className="py-20 mb-10 container mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg"
     >
       <h2 className="text-3xl font-bold text-center">Found a Dog? 🐶</h2>
       <p className="text-center mt-4">

@@ -16,10 +16,10 @@ const Rescue = () => {
       <br />
       <br />
 
-      <div className="font-bold text-center">
+      {/* <div className="font-bold text-center">
         <h2 className="text-3xl">Contact Us 📞</h2>
         <span> 0712 774 613</span>
-      </div>
+      </div> */}
     </section>
   );
 };

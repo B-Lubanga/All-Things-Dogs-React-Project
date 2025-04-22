@@ -8,9 +8,9 @@ const centers = [
 
 export default function Centers() {
   return (
-    <div>
-      <h2 className="text-2xl font-bold mb-4">Nearby Rescue Centers</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div >
+      <h2 className="text-2xl font-bold my-4  text-center">Nearby Rescue Centers</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 m-20">
         {centers.map((center) => (
           <div key={center.name} className="bg-green-100 p-4 rounded shadow">
             <h3 className="text-lg font-semibold">{center.name}</h3>
