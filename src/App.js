@@ -1,35 +1,28 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import Adopt from "./components/Adopt";
-import Rescue from "./components/Rescue";
-import FoundDog from "./components/FoundDog";
-import DogForm from "./components/DogForm";
-import DogList from "./components/DogList";
-import OwnerModal from "./components/OwnerModal";
-import Centers from "./components/Centers";
-import VetClinics from "./components/VetClinics";
-import Footer from "./components/Footer";
-import Contact from "./components/Contact";
+import Home from "./pages/Home";
+import Adopt from "./pages/Adopt";
+import RescueCenter from "./pages/RescueCenters";
+import VetClinic from "./pages/VetClinics";
+import FoundDog from "./pages/FoundDog";
+import Contact from "./pages/Contact";
 
 function App() {
-  // const [open, setOpen] = React.useState(false);
   return (
-    <div className="App">
+    <Router>
       <Navbar />
-      <Home />
-      <Adopt />
-      <Rescue />
-      <FoundDog />
-      <DogForm />
-      <DogList />
-      <OwnerModal />
-      <Contact />
-      <Centers />
-      <VetClinics />
-      <OwnerModal />
-      <Footer />
-    </div>
+      <div className="pt-20 px-4">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/adopt" element={<Adopt />} />
+          <Route path="/rescue" element={<RescueCenter />} />
+          <Route path="/vet" element={<VetClinic />} />
+          <Route path="/found" element={<FoundDog />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -1,7 +1,7 @@
 {
   "dogs": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Max",
       "breed": "Labrador",
       "age": "3 years",
@@ -14,11 +14,50 @@
       },
       "cost": null,
       "url": "https://placedog.net/400/300?id=1"
+    },
+    {
+      "id": "8d80",
+      "name": "Josh",
+      "breed": "Japanese Spitz",
+      "age": "2 Years",
+      "location": "Kitisuru",
+      "purpose": "adoption",
+      "url": "https://images.pexels.com/photos/5913074/pexels-photo-5913074.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "ownerName": "Oscar",
+      "ownerContact": "0712345678",
+      "ownerLocation": "Kitisuru",
+      "cost": "0"
+    },
+    {
+      "id": "8bc9",
+      "name": "Josh",
+      "breed": "Bulldog",
+      "age": "1 yr",
+      "location": "Machakos",
+      "purpose": "adoption",
+      "url": "https://images.pexels.com/photos/776078/pexels-photo-776078.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "ownerName": "Benjie",
+      "ownerContact": "07123456",
+      "ownerLocation": "Machakos",
+      "cost": "0"
+    },
+    {
+      "id": "f896",
+      "name": "Josh",
+      "breed": "Yorkshire terrier",
+      "age": "1 year",
+      "location": "Machakos",
+      "purpose": "rescue",
+      "url": "https://images.pexels.com/photos/23831387/pexels-photo-23831387/free-photo-of-close-up-of-a-brown-shih-tzu-dog.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "ownerName": "Zeb",
+      "ownerContact": "0712345678",
+      "ownerLocation": "Machakos",
+      "cost": "0 ksh"
     }
   ],
   "rescueCenters": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Nairobi Rescue Shelter",
       "location": "Nairobi",
       "contact": "0722333444"
@@ -26,7 +65,7 @@
   ],
   "vets": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Green Pet Vets",
       "location": "Nairobi",
       "services": ["Check-up", "Vaccination"]
@@ -34,7 +73,7 @@
   ],
   "clinics": [
     {
-      "id": 1,
+      "id": "1",
       "name": "PetCare Clinic",
       "location": "Nairobi",
       "contact": "0799988776"
