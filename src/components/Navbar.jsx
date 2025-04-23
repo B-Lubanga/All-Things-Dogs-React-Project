@@ -1,37 +1,43 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="bg-blue-600 text-white p-4 shadow-md fixed top-0 w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
-        <a href="#home" className="text-3xl font-bold">
+        <Link to="/" className="text-3xl font-bold">
           🐶 Dog Adoption
-        </a>
+        </Link>
         <ul className="flex space-x-6 font-bold">
           <li>
-            <a href="#home" className="hover:underline">
+            <Link to="/" className="hover:underline">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#adopt" className="hover:underline">
+            <Link to="/adopt" className="hover:underline">
               Adopt
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#rescue" className="hover:underline">
-              Rescue
-            </a>
-          </li>
-          <li>
-            <a href="#found-dog" className="hover:underline">
+            <Link to="/found" className="hover:underline">
               Found a Dog
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#contact" className="hover:underline">
+            <Link to="/rescue" className="hover:underline">
+              Rescue Center
+            </Link>
+          </li>
+          <li>
+            <Link to="/vet" className="hover:underline">
+              Vet Clinic
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="hover:underline">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
