@@ -1,3 +1,6 @@
+
+
+
 import React from "react";
 import Main from "../components/Main";
 
@@ -27,38 +30,41 @@ const clinics = [
 const VetClinic = () => {
   return (
     <Main>
-      <section className="pt-20 container mx-auto mt-8 p-6">
-        <h2 className="text-3xl font-bold text-center text-blue-800">
-          Vet Clinics 🏥
-        </h2>
-        <p className="text-center mt-4 max-w-2xl mx-auto text-gray-700">
-          Find trusted veterinary clinics near you for regular checkups,
-          vaccinations, and emergency care. Our listed clinics offer reliable
-          and compassionate care for your furry friends.
-        </p>
+      <section className="py-20 px-4 max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-blue-800">Vet Clinics 🏥</h2>
+          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+            Find trusted veterinary clinics near you for regular checkups,
+            vaccinations, and emergency care. Our listed clinics offer reliable
+            and compassionate care for your furry friends.
+          </p>
+        </div>
 
-        <h3 className="text-2xl font-semibold text-blue-700 mt-10 text-center">
+        <h3 className="text-2xl font-semibold text-center text-blue-700 mb-6">
           Nearby Clinics
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mt-6">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {clinics.map((clinic) => (
             <div
               key={clinic.name}
-              className="bg-blue-100 border border-blue-200 p-6 rounded-lg shadow-md hover:shadow-lg transition"
+              className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all p-6 border border-blue-100"
             >
-              <h4 className="text-xl font-semibold text-blue-900">
+              <h4 className="text-xl font-semibold text-blue-900 mb-2">
                 {clinic.name}
               </h4>
-              <p className="text-sm text-blue-700 mt-1">
-                <strong>Location:</strong> {clinic.location}
+              <p className="text-sm text-gray-700 mb-1">
+                <span className="font-medium text-blue-700">📍 Location:</span> {clinic.location}
               </p>
-              <p className="text-sm text-blue-700">
-                <strong>Phone:</strong> {clinic.phone}
+              <p className="text-sm text-gray-700 mb-1">
+                <span className="font-medium text-blue-700">📞 Phone:</span> {clinic.phone}
               </p>
-              <p className="text-sm text-blue-700">
-                <strong>Opening Hours:</strong> 8am – 8pm (Available for house
-                calls after hours for emergencies)
+              <p className="text-sm text-gray-700">
+                <span className="font-medium text-blue-700">🕒 Hours:</span> 8am – 8pm
+                <br />
+                <span className="text-xs italic text-gray-500">
+                  (Emergency house calls available after hours)
+                </span>
               </p>
             </div>
           ))}
