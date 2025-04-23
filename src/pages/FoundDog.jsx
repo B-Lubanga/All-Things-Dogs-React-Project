@@ -1,4 +1,4 @@
-// src/pages/FoundDog.jsx
+
 import React, { useState } from "react";
 import Main from "../components/Main";
 
@@ -10,7 +10,6 @@ const FoundDog = () => {
     location: "",
     purpose: "adoption",
     url: "",
-    // imageFile: null,s
     ownerName: "",
     ownerContact: "",
     ownerLocation: "",
@@ -18,36 +17,18 @@ const FoundDog = () => {
   });
 
   function handleChange(e) {
-    const { name, value, } = e.target;
-    // if (name === "imageFile") {
-    //   setFormData({ ...formData, imageFile: files[0] });
-    // } else {
-    //   setFormData({ ...formData, [name]: value });
-    // }
-    setFormData({ ...formData, [name]: value })
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   }
 
   async function handleSubmit(e) {
     e.preventDefault();
 
-    // let imageUrl = formData.url;
-    // if (formData.imageFile) {
-    //   // For now, we'll mock the upload. In a real app, you would upload to Cloudinary, Firebase, etc.
-    //   imageUrl = URL.createObjectURL(formData.imageFile);
-    // }
-
-    const dataToSend = {
-      ...formData,
-      // url: imageUrl,
-    };
-
-    // delete dataToSend.imageFile;
-
     try {
       const response = await fetch("http://localhost:4000/dogs", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(dataToSend),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
@@ -59,7 +40,6 @@ const FoundDog = () => {
           location: "",
           purpose: "adoption",
           url: "",
-          // imageFile: null,
           ownerName: "",
           ownerContact: "",
           ownerLocation: "",
@@ -76,114 +56,103 @@ const FoundDog = () => {
 
   return (
     <Main>
-      <section className="py-4 container mx-auto p-6 bg-white rounded-lg">
-        <h2 className="text-3xl font-bold text-center">Found a Dog? 🐶</h2>
-        <p className="text-center mt-4">
-          If you've found a stray dog or want to list a dog for sale or
-          adoption, please provide the details below.
-        </p>
+      <section className="py-20 px-6 max-w-4xl mx-auto bg-white rounded-xl shadow-lg">
+        <div className="text-center mb-10">
+          <h2 className="text-4xl font-bold text-red-600">Found a Dog? 🐶</h2>
+          <p className="mt-3 text-gray-600">
+            If you've found a stray or want to list a dog for sale or adoption, fill out the form below with the details.
+          </p>
+        </div>
 
         <form
           onSubmit={handleSubmit}
-          className="mt-8 max-w-2xl mx-auto  p-6 rounded-lg shadow-md space-y-4"
+          className="space-y-5"
         >
-          <input
-            className="input"
-            name="name"
-            placeholder="Dog's Name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-          <input
-            className="input"
-            name="breed"
-            placeholder="Breed"
-            value={formData.breed}
-            onChange={handleChange}
-          />
-          <input
-            className="input"
-            name="age"
-            placeholder="Age"
-            value={formData.age}
-            onChange={handleChange}
-          />
-          <input
-            className="input"
-            name="location"
-            placeholder="Dog Location"
-            value={formData.location}
-            onChange={handleChange}
-          />
-
-          <select
-            name="purpose"
-            className="input"
-            value={formData.purpose}
-            onChange={handleChange}
-          >
-            <option value="adoption">Adoption</option>
-            <option value="rescue">Rescue</option>
-            <option value="sale">Sale</option>
-          </select>
-
-          {/* Image input options */}
-          <div>
-            {/* <label className="block font-semibold mb-1">
-              Dog Image Link:
-            </label> */}
+          {/* Dog Info */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input
+              className="input"
+              name="name"
+              placeholder="Dog's Name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+            <input
+              className="input"
+              name="breed"
+              placeholder="Breed"
+              value={formData.breed}
+              onChange={handleChange}
+            />
+            <input
+              className="input"
+              name="age"
+              placeholder="Age"
+              value={formData.age}
+              onChange={handleChange}
+            />
+            <input
+              className="input"
+              name="location"
+              placeholder="Dog Location"
+              value={formData.location}
+              onChange={handleChange}
+            />
+            <select
+              name="purpose"
+              className="input"
+              value={formData.purpose}
+              onChange={handleChange}
+            >
+              <option value="adoption">Adoption</option>
+              <option value="rescue">Rescue</option>
+              <option value="sale">Sale</option>
+            </select>
             <input
               className="input"
               name="url"
-              placeholder=" Dog Image URL"
+              placeholder="Dog Image URL"
               value={formData.url}
               onChange={handleChange}
             />
           </div>
-          {/* <div>
-            <label className="block font-semibold mb-1">
-              Or Upload an Image:
-            </label>
+
+          <hr className="my-6" />
+
+          {/* Owner Info */}
+          <h3 className="text-xl font-semibold text-gray-800">Owner Info</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
-              type="file"
-              name="imageFile"
-              accept="image/*"
+              className="input"
+              name="ownerName"
+              placeholder="Owner Name"
+              value={formData.ownerName}
               onChange={handleChange}
-              className="w-full"
             />
-          </div> */}
+            <input
+              className="input"
+              name="ownerContact"
+              placeholder="Owner Contact"
+              value={formData.ownerContact}
+              onChange={handleChange}
+            />
+            <input
+              className="input"
+              name="ownerLocation"
+              placeholder="Owner Location"
+              value={formData.ownerLocation}
+              onChange={handleChange}
+            />
+            <input
+              className="input"
+              name="cost"
+              placeholder="Cost (if for sale)"
+              value={formData.cost}
+              onChange={handleChange}
+            />
+          </div>
 
-          {/* Owner details */}
-          <input
-            className="input"
-            name="ownerName"
-            placeholder="Owner Name"
-            value={formData.ownerName}
-            onChange={handleChange}
-          />
-          <input
-            className="input"
-            name="ownerContact"
-            placeholder="Owner Contact"
-            value={formData.ownerContact}
-            onChange={handleChange}
-          />
-          <input
-            className="input"
-            name="ownerLocation"
-            placeholder="Owner Location"
-            value={formData.ownerLocation}
-            onChange={handleChange}
-          />
-          <input
-            className="input"
-            name="cost"
-            placeholder="Cost (if for sale)"
-            value={formData.cost}
-            onChange={handleChange}
-          />
-
-          <button className="inline-block bg-red-500 w-full hover:bg-red-600 text-white text-base px-6 py-2 rounded shadow-md transition">
+          <button className="w-full bg-red-500 hover:bg-red-600 text-white py-3 px-4 rounded-lg shadow-md transition">
             Submit Dog Details
           </button>
         </form>

@@ -3,6 +3,7 @@
 
 import React from "react";
 import Main from "../components/Main";
+import { FaDog } from "react-icons/fa6";
 
 const clinics = [
   {
@@ -32,7 +33,10 @@ const VetClinic = () => {
     <Main>
       <section className="py-20 px-4 max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-blue-800">Vet Clinics 🏥</h2>
+          <div className="flex justify-center items-center gap-2 text-4xl font-bold text-red-600 text-center">
+            <h2>Vet Clinics </h2>
+            <FaDog />
+          </div>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
             Find trusted veterinary clinics near you for regular checkups,
             vaccinations, and emergency care. Our listed clinics offer reliable

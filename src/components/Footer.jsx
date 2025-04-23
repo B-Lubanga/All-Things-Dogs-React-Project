@@ -1,6 +1,4 @@
 import React from "react";
-
-// import { FaFacebook } from "react-icons/fa";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 
