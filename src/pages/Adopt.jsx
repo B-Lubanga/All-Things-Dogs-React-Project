@@ -43,9 +43,9 @@ export default function Adopt() {
   return (
     <Main>
       <h1 className="text-3xl font-bold mb-6 text-center">Adoptable pets</h1>
+      <div className="m-10 grid grid-cols-1 md:grid-cols-3 gap-4">
 
-      <div className="m-4 flex gap-4 flex-wrap">
-        <div>
+        <div  className="w-full">
           <input
             list="breedName"
             placeholder="Search by breed"
@@ -60,13 +60,13 @@ export default function Adopt() {
           </datalist>
         </div>
 
-        <div>
+        <div  className="w-full">
           <input
             list="locationList"
             placeholder="Search by location"
             value={searchLocation}
             onChange={(e) => setSearchLocation(e.target.value)}
-            className="p-2 border rounded"
+            className="p-2 border rounded w-full"
           />
           <datalist id="locationList">
             {uniqueLocations.map((location, index) => (
@@ -75,12 +75,18 @@ export default function Adopt() {
           </datalist>
         </div>
 
+       
+
+        <div  className="w-full">
+
+
         <button
           onClick={handleFilter}
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          className=" inline-block bg-red-500 hover:bg-red-600 text-white text-base px-6 py-2 rounded shadow-md transition"
         >
           Search
         </button>
+        </div>
       </div>     
 
       <div className="flex justify-between gap-1 m-10 flex-wrap">

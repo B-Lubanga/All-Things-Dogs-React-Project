@@ -1,7 +1,7 @@
-import React from "react";
-import Main from "../components/Main";
+import RescueImage from "../assets/rescue-img.webp";
+import { FaPaw } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
-// Rescue center data with phone numbers
 const centers = [
   {
     name: "Nairobi Animal Rescue",
@@ -26,47 +26,53 @@ const centers = [
 ];
 
 const RescueCenter = () => {
+  const navigate= useNavigate()
   return (
-    <Main>
-      <section id="rescue" className="pt-20 container mx-auto mt-8 p-6">
-        <h2 className="text-3xl font-bold text-center text-blue-800">
-          Rescue a Dog 🆘
-        </h2>
-        <p className="text-center mt-4 max-w-3xl mx-auto text-gray-700">
-          Help Rescue & Reunite Dogs! 🐾 Every dog deserves safety and care. In
-          our Dog Rescue section, you can report lost or stray dogs, helping
-          them find their way home or into loving arms. Browse listings of
-          rescued dogs available for adoption and connect with rescue
-          organizations dedicated to giving these pups a second chance. Whether
-          you're reuniting a lost pet or offering a forever home, your support
-          makes a difference in a dog's life! 🐶💙
-        </p>
-
-        <h2 className="text-2xl font-bold my-10 text-center text-blue-700">
-          Nearby Rescue Centers
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {centers.map((center) => (
-            <div
-              key={center.name}
-              className="bg-blue-100 border border-blue-200 p-6 rounded-lg shadow-md hover:shadow-lg transition"
-            >
-              <h3 className="text-xl font-semibold text-blue-900">
-                {center.name}
-              </h3>
-              <p className="text-sm text-blue-700 mt-1">
-                <strong>Location:</strong> {center.location}
-              </p>
-              <p className="text-sm text-blue-700">
-                <strong>Phone:</strong> {center.phone}
-              </p>
-            </div>
-          ))}
+    <div className="bg-white">
+      {/* Top Section */}
+      <div className="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-24 py-12 bg-gray-50 rounded-3xl shadow-md">
+        {/* Text Content */}
+        <div className="lg:w-1/2 text-center lg:text-left space-y-6">
+          <h1 className="text-4xl font-bold text-gray-800">
+          <span className="text-red-500  underline pr-1">Rescue!</span> a Dog 🆘
+          </h1>
+          <p className="text-gray-600 text-lg leading-relaxed">
+            Looking to bring home a furry friend? Explore our list of adorable, ready-to-adopt puppies. Give them a fur-ever home today!
+            Whether you're reuniting a lost pet or offering a forever home, your support makes a difference in a dog's life! 🐶💙
+          </p>
+          <button onClick={()=> navigate("/vet")} className="mt-4 inline-block bg-red-500 hover:bg-red-600 text-white text-base px-6 py-3 rounded-full shadow-md transition">
+            Vet Inquiry →
+          </button>
         </div>
-      </section>
-    </Main>
+
+        {/* Image Content */}
+        <div className="lg:w-1/2 mt-10 lg:mt-0 flex justify-center">
+          <img
+            src={RescueImage}
+            alt="Dog wrapped in towel with food and milk"
+            className="w-full max-w-md rounded-2xl object-cover"
+          />
+        </div>
+      </div>
+
+      {/* Bottom Services Section */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 px-6 lg:px-24">
+
+        {centers.map((center) => (
+        <div className=" p-6 bg-blue-200 rounded-xl mb-2 shadow-lg  text-center  hover:shadow-lg transition">
+          <FaPaw className=" text-3xl mx-auto text-blue-900 mb-4" />
+          <h3 className=" font-bold text-blue-900 text-lg mb-2">{center.name}</h3>
+          <p className="text-gray-600 text-blue-700 text-sm">{center.location}</p>
+          <p className="text-gray-600 text-sm text-blue-700">{center.phone}</p>
+
+        </div>
+
+        ))}
+       
+      </div>
+    </div>
   );
 };
 
 export default RescueCenter;
+

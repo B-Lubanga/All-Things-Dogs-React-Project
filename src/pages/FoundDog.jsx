@@ -10,7 +10,7 @@ const FoundDog = () => {
     location: "",
     purpose: "adoption",
     url: "",
-    imageFile: null,
+    // imageFile: null,s
     ownerName: "",
     ownerContact: "",
     ownerLocation: "",
@@ -18,29 +18,30 @@ const FoundDog = () => {
   });
 
   function handleChange(e) {
-    const { name, value, files } = e.target;
-    if (name === "imageFile") {
-      setFormData({ ...formData, imageFile: files[0] });
-    } else {
-      setFormData({ ...formData, [name]: value });
-    }
+    const { name, value, } = e.target;
+    // if (name === "imageFile") {
+    //   setFormData({ ...formData, imageFile: files[0] });
+    // } else {
+    //   setFormData({ ...formData, [name]: value });
+    // }
+    setFormData({ ...formData, [name]: value })
   }
 
   async function handleSubmit(e) {
     e.preventDefault();
 
-    let imageUrl = formData.url;
-    if (formData.imageFile) {
-      // For now, we'll mock the upload. In a real app, you would upload to Cloudinary, Firebase, etc.
-      imageUrl = URL.createObjectURL(formData.imageFile);
-    }
+    // let imageUrl = formData.url;
+    // if (formData.imageFile) {
+    //   // For now, we'll mock the upload. In a real app, you would upload to Cloudinary, Firebase, etc.
+    //   imageUrl = URL.createObjectURL(formData.imageFile);
+    // }
 
     const dataToSend = {
       ...formData,
-      url: imageUrl,
+      // url: imageUrl,
     };
 
-    delete dataToSend.imageFile;
+    // delete dataToSend.imageFile;
 
     try {
       const response = await fetch("http://localhost:4000/dogs", {
@@ -58,7 +59,7 @@ const FoundDog = () => {
           location: "",
           purpose: "adoption",
           url: "",
-          imageFile: null,
+          // imageFile: null,
           ownerName: "",
           ownerContact: "",
           ownerLocation: "",
@@ -75,7 +76,7 @@ const FoundDog = () => {
 
   return (
     <Main>
-      <section className="py-20 container mx-auto p-6 bg-white rounded-lg shadow-lg">
+      <section className="py-4 container mx-auto p-6 bg-white rounded-lg">
         <h2 className="text-3xl font-bold text-center">Found a Dog? 🐶</h2>
         <p className="text-center mt-4">
           If you've found a stray dog or want to list a dog for sale or
@@ -84,7 +85,7 @@ const FoundDog = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="mt-8 max-w-2xl mx-auto bg-gray-100 p-6 rounded-lg shadow-md space-y-4"
+          className="mt-8 max-w-2xl mx-auto  p-6 rounded-lg shadow-md space-y-4"
         >
           <input
             className="input"
@@ -128,18 +129,18 @@ const FoundDog = () => {
 
           {/* Image input options */}
           <div>
-            <label className="block font-semibold mb-1">
-              Dog Image Link (optional):
-            </label>
+            {/* <label className="block font-semibold mb-1">
+              Dog Image Link:
+            </label> */}
             <input
               className="input"
               name="url"
-              placeholder="Image URL"
+              placeholder=" Dog Image URL"
               value={formData.url}
               onChange={handleChange}
             />
           </div>
-          <div>
+          {/* <div>
             <label className="block font-semibold mb-1">
               Or Upload an Image:
             </label>
@@ -150,7 +151,7 @@ const FoundDog = () => {
               onChange={handleChange}
               className="w-full"
             />
-          </div>
+          </div> */}
 
           {/* Owner details */}
           <input
@@ -182,7 +183,7 @@ const FoundDog = () => {
             onChange={handleChange}
           />
 
-          <button className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 w-full">
+          <button className="inline-block bg-red-500 w-full hover:bg-red-600 text-white text-base px-6 py-2 rounded shadow-md transition">
             Submit Dog Details
           </button>
         </form>
