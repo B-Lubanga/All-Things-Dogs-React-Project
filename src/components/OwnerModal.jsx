@@ -1,5 +1,7 @@
 import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
-import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
+
+import { GiSittingDog } from "react-icons/gi";
+import { SiDatadog } from "react-icons/si";
 
 const OwnerModal = ({ open, setOpen, data }) => {
   if (!data) return null;
@@ -11,15 +13,17 @@ const OwnerModal = ({ open, setOpen, data }) => {
       <div className="fixed inset-0 z-10 flex items-center justify-center p-4">
         <DialogPanel className="bg-white rounded-lg shadow-xl max-w-md w-full p-6">
           <div className="flex items-start gap-4">
-            <div className="bg-green-100 p-2 rounded-full">
-              <ExclamationTriangleIcon className="h-6 w-6 text-green-600" />
+           
+            <div className=" shadow-xl p-2 mt-2 rounded-full">
+              <SiDatadog className="text-center items-center text-7xl"/>
             </div>
-            <div>
+            <div className="flex flex-col gap-4">
               <DialogTitle className="text-lg font-semibold text-gray-900 mb-2">
                 {data.name}'s Owner Info
               </DialogTitle>
-              <p className="text-sm text-gray-700">
+              <p className="text-sm text-gray-700 flex gap-1">
                 <strong>Owner:</strong> {data.ownerName}
+                <GiSittingDog className="text-2xl" />
               </p>
               <p className="text-sm text-gray-700">
                 <strong>Contact:</strong> {data.ownerContact}
