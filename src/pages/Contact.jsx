@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Main from "../components/Main";
 
@@ -32,7 +31,8 @@ const Contact = () => {
         <div className="bg-white rounded-2xl shadow-md p-8">
           <h2 className="text-4xl font-bold text-center mb-4">Contact Us</h2>
           <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
-            Whether you need help, want to report something, or simply share feedback — we’re here for you. Reach out anytime!
+            Whether you need help, want to report something, or simply share
+            feedback — we’re here for you. Reach out anytime!
           </p>
 
           {/* Info Section */}
@@ -91,7 +91,7 @@ const Contact = () => {
             ></textarea>
             <button
               type="submit"
-              className="inline-block bg-red-500 hover:bg-red-600 text-white text-base px-6 py-3 rounded-xl shadow-md transition"
+              className="inline-block bg-blue-500 hover:bg-blue-600 text-white text-base px-6 py-3 rounded-xl shadow-md transition"
             >
               Send Message
             </button>

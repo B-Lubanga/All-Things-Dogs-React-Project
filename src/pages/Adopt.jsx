@@ -44,8 +44,7 @@ export default function Adopt() {
     <Main>
       <h1 className="text-3xl font-bold mb-6 text-center">Adoptable pets</h1>
       <div className="m-10 grid grid-cols-1 md:grid-cols-3 gap-4">
-
-        <div  className="w-full">
+        <div className="w-full">
           <input
             list="breedName"
             placeholder="Search by breed"
@@ -60,7 +59,7 @@ export default function Adopt() {
           </datalist>
         </div>
 
-        <div  className="w-full">
+        <div className="w-full">
           <input
             list="locationList"
             placeholder="Search by location"
@@ -75,30 +74,28 @@ export default function Adopt() {
           </datalist>
         </div>
 
-       
-
-        <div  className="w-full">
-
-
-        <button
-          onClick={handleFilter}
-          className=" inline-block bg-red-500 hover:bg-red-600 text-white text-base px-6 py-2 rounded shadow-md transition"
-        >
-          Search
-        </button>
+        <div className="w-full">
+          <button
+            onClick={handleFilter}
+            className=" inline-block bg-blue-500 hover:bg-blue-600 text-white text-base px-6 py-2 rounded shadow-md transition"
+          >
+            Search
+          </button>
         </div>
-      </div>     
+      </div>
 
       <div className="flex justify-between gap-1 m-10 flex-wrap">
-
-      {filteredDogs.map((dog) => (
-
-        <div onClick={() => handleCardClick(dog)} key={dog.id}  className="w-[300px] hover:scale-105 transition md:w-[20%]">
+        {filteredDogs.map((dog) => (
+          <div
+            onClick={() => handleCardClick(dog)}
+            key={dog.id}
+            className="w-[300px] hover:scale-105 transition md:w-[20%]"
+          >
             <div className="max-w-sm my-2 rounded-lg overflow-hidden shadow-lg h-[340px] w-full bg-white">
               <div className="relative h-60">
                 <img
                   src={dog.url}
-                  alt={dog.name}  
+                  alt={dog.name}
                   className="w-full h-full object-cover"
                 />
 
@@ -107,16 +104,14 @@ export default function Adopt() {
                     {/* Left side text */}
                     <div className="p-1 rounded-lg  ">
                       <p className="text-sm font-bold text-white">
-                      <GiDogBowl />
+                        <GiDogBowl />
                       </p>
-                      
                     </div>
                     {/* Right side text */}
                     <div className="text-white px-3 py-2">
                       <span className="text-sm font-medium">
-                      <FaDog className="text-blue" />
+                        <FaDog className="text-blue" />
                       </span>
-                     
                     </div>
                   </div>
                 </div>
@@ -124,36 +119,23 @@ export default function Adopt() {
 
               {/* Content Section */}
               <div className="p-2 bg-white">
-              <div className="flex justify-between items-center">
-                    {/* Left side text */}
-                    <div className="p-1 rounded-lg  ">
-                      <p className="text-sm font-bold p-1 ">
-                      {dog.name}
-                      </p>
-                      <p className="text-sm font-normal p-1">
-                      {dog.breed}
-                      </p>
-                    </div>
-                    {/* Right side text */}
-                    <div className=" px-3 py-2">
-                      <span className="text-sm font-medium p-1">
-                      {dog.age}
-                      </span>
-                      <p className="text-sm font-bold p-1 ">
-                      {dog.location}
-                      </p>
-                    </div>
+                <div className="flex justify-between items-center">
+                  {/* Left side text */}
+                  <div className="p-1 rounded-lg  ">
+                    <p className="text-sm font-bold p-1 ">{dog.name}</p>
+                    <p className="text-sm font-normal p-1">{dog.breed}</p>
                   </div>
-
+                  {/* Right side text */}
+                  <div className=" px-3 py-2">
+                    <span className="text-sm font-medium p-1">{dog.age}</span>
+                    <p className="text-sm font-bold p-1 ">{dog.location}</p>
+                  </div>
+                </div>
               </div>
-
-              
             </div>
           </div>
-
-      ))}
-
-          </div>
+        ))}
+      </div>
 
       <OwnerModal
         open={isModalOpen}

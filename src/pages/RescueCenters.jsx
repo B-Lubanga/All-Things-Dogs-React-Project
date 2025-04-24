@@ -26,7 +26,7 @@ const centers = [
 ];
 
 const RescueCenter = () => {
-  const navigate= useNavigate()
+  const navigate = useNavigate();
   return (
     <div className="bg-white">
       {/* Top Section */}
@@ -34,13 +34,19 @@ const RescueCenter = () => {
         {/* Text Content */}
         <div className="lg:w-1/2 text-center lg:text-left space-y-6">
           <h1 className="text-4xl font-bold text-gray-800">
-          <span className="text-red-500  underline pr-1">Rescue!</span> a Dog 🆘
+            <span className="text-red-500  underline pr-1">Rescue!</span> a Dog
+            🆘
           </h1>
           <p className="text-gray-600 text-lg leading-relaxed">
-            Looking to bring home a furry friend? Explore our list of adorable, ready-to-adopt puppies. Give them a fur-ever home today!
-            Whether you're reuniting a lost pet or offering a forever home, your support makes a difference in a dog's life! 🐶💙
+            Looking to bring home a furry friend? Explore our list of adorable,
+            ready-to-adopt puppies. Give them a fur-ever home today! Whether
+            you're reuniting a lost pet or offering a forever home, your support
+            makes a difference in a dog's life! 🐶💙
           </p>
-          <button onClick={()=> navigate("/vet")} className="mt-4 inline-block bg-red-500 hover:bg-red-600 text-white text-base px-6 py-3 rounded-full shadow-md transition">
+          <button
+            onClick={() => navigate("/vet")}
+            className="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white text-base px-6 py-3 rounded-full shadow-md transition"
+          >
             Vet Inquiry →
           </button>
         </div>
@@ -57,22 +63,23 @@ const RescueCenter = () => {
 
       {/* Bottom Services Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 px-6 lg:px-24">
-
         {centers.map((center) => (
-        <div className=" p-6 bg-blue-200 rounded-xl mb-2 shadow-lg  text-center  hover:shadow-lg transition">
-          <FaPaw className=" text-3xl mx-auto text-blue-900 mb-4" />
-          <h3 className=" font-bold text-blue-900 text-lg mb-2">{center.name}</h3>
-          <p className="text-gray-600 text-blue-700 text-sm">{center.location}</p>
-          <p className="text-gray-600 text-sm text-blue-700">{center.phone}</p>
-
-        </div>
-
+          <div className=" p-6 bg-blue-200 rounded-xl mb-2 shadow-lg  text-center  hover:shadow-lg transition">
+            <FaPaw className=" text-3xl mx-auto text-blue-900 mb-4" />
+            <h3 className=" font-bold text-blue-900 text-lg mb-2">
+              {center.name}
+            </h3>
+            <p className="text-gray-600 text-blue-700 text-sm">
+              {center.location}
+            </p>
+            <p className="text-gray-600 text-sm text-blue-700">
+              {center.phone}
+            </p>
+          </div>
         ))}
-       
       </div>
     </div>
   );
 };
 
 export default RescueCenter;
-

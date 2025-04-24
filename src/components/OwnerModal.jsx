@@ -13,9 +13,8 @@ const OwnerModal = ({ open, setOpen, data }) => {
       <div className="fixed inset-0 z-10 flex items-center justify-center p-4">
         <DialogPanel className="bg-white rounded-lg shadow-xl max-w-md w-full p-6">
           <div className="flex items-start gap-4">
-           
             <div className=" shadow-xl p-2 mt-2 rounded-full">
-              <SiDatadog className="text-center items-center text-7xl"/>
+              <SiDatadog className="text-center items-center text-7xl" />
             </div>
             <div className="flex flex-col gap-4">
               <DialogTitle className="text-lg font-semibold text-gray-900 mb-2">
@@ -41,7 +40,7 @@ const OwnerModal = ({ open, setOpen, data }) => {
           <div className="mt-4 text-right">
             <button
               onClick={() => setOpen(false)}
-              className="px-4 py-2 bg-red-600 text-white text-sm rounded hover:bg-red-500"
+              className="px-4 py-2 bg-blue-600 text-white text-sm rounded hover:bg-red-500"
             >
               Close
             </button>

@@ -1,6 +1,3 @@
-
-
-
 import React from "react";
 import Main from "../components/Main";
 import { FaDog } from "react-icons/fa6";
@@ -33,7 +30,7 @@ const VetClinic = () => {
     <Main>
       <section className="py-20 px-4 max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <div className="flex justify-center items-center gap-2 text-4xl font-bold text-red-600 text-center">
+          <div className="flex justify-center items-center gap-2 text-4xl font-bold text-blue-600 text-center">
             <h2>Vet Clinics </h2>
             <FaDog />
           </div>
@@ -58,13 +55,16 @@ const VetClinic = () => {
                 {clinic.name}
               </h4>
               <p className="text-sm text-gray-700 mb-1">
-                <span className="font-medium text-blue-700">📍 Location:</span> {clinic.location}
+                <span className="font-medium text-blue-700">📍 Location:</span>{" "}
+                {clinic.location}
               </p>
               <p className="text-sm text-gray-700 mb-1">
-                <span className="font-medium text-blue-700">📞 Phone:</span> {clinic.phone}
+                <span className="font-medium text-blue-700">📞 Phone:</span>{" "}
+                {clinic.phone}
               </p>
               <p className="text-sm text-gray-700">
-                <span className="font-medium text-blue-700">🕒 Hours:</span> 8am – 8pm
+                <span className="font-medium text-blue-700">🕒 Hours:</span> 8am
+                – 8pm
                 <br />
                 <span className="text-xs italic text-gray-500">
                   (Emergency house calls available after hours)
