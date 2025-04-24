@@ -1,8 +1,6 @@
-
 import React, { useState } from "react";
 import Main from "../components/Main";
 import { useNavigate } from "react-router-dom";
-
 
 const FoundDog = () => {
   const navigate = useNavigate();
@@ -63,16 +61,14 @@ const FoundDog = () => {
     <Main>
       <section className="py-20 px-6 max-w-4xl mx-auto bg-white rounded-xl shadow-lg">
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold text-red-600">Found a Dog? 🐶</h2>
+          <h2 className="text-4xl font-bold text-blue-600">Found a Dog? 🐶</h2>
           <p className="mt-3 text-gray-600">
-            If you've found a stray or want to list a dog for sale or adoption, fill out the form below with the details.
+            If you've found a stray or want to list a dog for sale or adoption,
+            fill out the form below with the details.
           </p>
         </div>
 
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-5"
-        >
+        <form onSubmit={handleSubmit} className="space-y-5">
           {/* Dog Info */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
@@ -157,7 +153,7 @@ const FoundDog = () => {
             />
           </div>
 
-          <button className="w-full bg-red-500 hover:bg-red-600 text-white py-3 px-4 rounded-lg shadow-md transition">
+          <button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 px-4 rounded-lg shadow-md transition">
             Submit Dog Details
           </button>
         </form>

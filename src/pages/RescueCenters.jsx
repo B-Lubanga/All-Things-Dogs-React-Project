@@ -38,10 +38,13 @@ const RescueCenter = () => {
             🆘
           </h1>
           <p className="text-gray-600 text-lg leading-relaxed">
-            Looking to bring home a furry friend? Explore our list of adorable,
-            ready-to-adopt puppies. Give them a fur-ever home today! Whether
-            you're reuniting a lost pet or offering a forever home, your support
-            makes a difference in a dog's life! 🐶💙
+            Paw-lease don’t scroll past a pup in need! 🐶💔 Spotted a stray tail
+            wagging alone or a pup feeling ruff? Let’s fetch them the help they
+            deserve! Reach out to nearby rescue centers or vet clinics—we're all
+            ears when it comes to saving lives. Every dog deserves a second
+            leash on life. 🦴 At our center, we believe in turning sad howls
+            into happy tails. So why not stop chasing your tail and start
+            changing a life?
           </p>
           <button
             onClick={() => navigate("/vet")}

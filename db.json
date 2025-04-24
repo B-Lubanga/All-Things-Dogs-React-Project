@@ -1,21 +1,6 @@
 {
   "dogs": [
     {
-      "id": "1",
-      "name": "Max",
-      "breed": "Labrador",
-      "age": "3 years",
-      "location": "Nairobi",
-      "purpose": "adoption",
-      "owner": {
-        "name": "John Doe",
-        "contact": "0712345678",
-        "location": "Nairobi"
-      },
-      "cost": null,
-      "url": "https://placedog.net/400/300?id=1"
-    },
-    {
       "id": "8d80",
       "name": "Josh",
       "breed": "Japanese Spitz",
@@ -29,30 +14,69 @@
       "cost": "0"
     },
     {
-      "id": "8bc9",
-      "name": "Josh",
-      "breed": "Bulldog",
-      "age": "1 yr",
-      "location": "Machakos",
+      "id": "f610",
+      "name": "Storm",
+      "breed": "Husky",
+      "age": "5 years",
+      "location": "Mombasa",
       "purpose": "adoption",
-      "url": "https://images.pexels.com/photos/776078/pexels-photo-776078.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "ownerName": "Benjie",
-      "ownerContact": "07123456",
-      "ownerLocation": "Machakos",
+      "url": "https://images.pexels.com/photos/3274988/pexels-photo-3274988.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "ownerName": "Zeb",
+      "ownerContact": "0712364379",
+      "ownerLocation": "Mombasa",
       "cost": "0"
     },
     {
-      "id": "f896",
-      "name": "Josh",
-      "breed": "Yorkshire terrier",
-      "age": "1 year",
-      "location": "Machakos",
+      "id": "8611",
+      "name": "Fin and Fisher",
+      "breed": "Husky",
+      "age": "5 Months",
+      "location": "Mirema",
+      "purpose": "adoption",
+      "url": "https://images.pexels.com/photos/9809436/pexels-photo-9809436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "ownerName": "Mike",
+      "ownerContact": "011789234",
+      "ownerLocation": "Mirema",
+      "cost": "Ksh 100,000 "
+    },
+    {
+      "id": "3920",
+      "name": "Zeus",
+      "breed": "Dobermann",
+      "age": "8 years",
+      "location": "Mombasa",
       "purpose": "rescue",
-      "url": "https://images.pexels.com/photos/23831387/pexels-photo-23831387/free-photo-of-close-up-of-a-brown-shih-tzu-dog.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "ownerName": "Zeb",
-      "ownerContact": "0712345678",
-      "ownerLocation": "Machakos",
-      "cost": "0 ksh"
+      "url": "https://images.pexels.com/photos/11497222/pexels-photo-11497222.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "ownerName": "Benjie",
+      "ownerContact": "0712774613",
+      "ownerLocation": "Kitengela",
+      "cost": "0"
+    },
+    {
+      "id": "d449",
+      "name": "Freeman",
+      "breed": "Golden retriever",
+      "age": "4 years",
+      "location": "Utawala",
+      "purpose": "sale",
+      "url": "https://images.pexels.com/photos/30188724/pexels-photo-30188724/free-photo-of-golden-retriever-in-autumn-landscape.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "ownerName": "Deborah",
+      "ownerContact": "0723489012",
+      "ownerLocation": "Pipeline",
+      "cost": "40,000"
+    },
+    {
+      "id": "eb99",
+      "name": "Captain",
+      "breed": "GermanShepard",
+      "age": "6 Years",
+      "location": "Kilimani",
+      "purpose": "adoption",
+      "url": "https://images.pexels.com/photos/333083/pexels-photo-333083.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "ownerName": "Afande",
+      "ownerContact": "0712346789",
+      "ownerLocation": "Kilimani",
+      "cost": "0"
     }
   ],
   "rescueCenters": [
@@ -68,7 +92,10 @@
       "id": "1",
       "name": "Green Pet Vets",
       "location": "Nairobi",
-      "services": ["Check-up", "Vaccination"]
+      "services": [
+        "Check-up",
+        "Vaccination"
+      ]
     }
   ],
   "clinics": [

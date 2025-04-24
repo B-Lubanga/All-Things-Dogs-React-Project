@@ -1,4 +1,4 @@
-import HeroImage from "../assets/dog-cover-photo-7516467.jpeg";
+import HeroImage from "../assets/found a home.jpeg";
 import Main from "../components/Main";
 import { useNavigate } from "react-router-dom";
 
@@ -14,7 +14,10 @@ const Home = () => {
               fur-ever homes?
             </h2>
             <p className="text-greyish text-base sm:font-semibold xl:font-medium my-4">
-              Find your perfect furry friend and give them a loving home.
+              Find your perfect furry friend and give them a loving home. Adopt
+              a four-legged fur-iend today and give them a fur-ever home.
+              Because when you rescue one, you’re not just their hero—you’re
+              their whole paw-sible future. 🐾💙
             </p>
             <p className="flex flex-col gap-2 my-4">
               Whether you're looking to adopt, foster, or just show some
@@ -32,7 +35,7 @@ const Home = () => {
             <p className="text-gray">
               <span className="text-textPurple text-xl hover:text-mediumPurple font-medium cursor-pointer whitespace-nowrap">
                 <span className="text-3xl"> 🐾 </span> Every dog deserves a
-                second chance. <span className="text-3xl"> 🐾 </span>
+                loving Home. <span className="text-3xl"> 🐾 </span>
               </span>
             </p>
           </div>
