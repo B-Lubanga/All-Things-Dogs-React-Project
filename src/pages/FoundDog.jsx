@@ -1,8 +1,12 @@
 
 import React, { useState } from "react";
 import Main from "../components/Main";
+import { useNavigate } from "react-router-dom";
+
 
 const FoundDog = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: "",
     breed: "",
@@ -45,6 +49,7 @@ const FoundDog = () => {
           ownerLocation: "",
           cost: "",
         });
+        navigate("/adopt");
       } else {
         alert("Failed to list the dog.");
       }
